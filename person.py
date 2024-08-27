@@ -4,6 +4,10 @@ import os
 import time
 
 # Load YOLO
+net = cv2.dnn.readNet(
+    "/home/logicfocus/ilens/docs/yolov3.weights", 
+    "/home/logicfocus/ilens/docs/yolov3.cfg"
+)
 net = cv2.dnn.readNet("/Users/helloabc/ilensLatest1/src/main/resources/scripts/peopleCount/Testing/yolov3.weights", "/Users/helloabc/ilensLatest1/src/main/resources/scripts/peopleCount/Testing/yolov3.cfg")
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
