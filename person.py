@@ -20,7 +20,9 @@ rtsp_url = 'rtsp://192.168.0.191:554/user=admin_password=tlJwpbo6_channel=1_stre
 cap = cv2.VideoCapture(rtsp_url)  # Replace "your_video.mp4" with 0 for webcam
 
 # Create a directory to save captured frames
-saving_dir = "/Users/helloabc/Desktop/person captures"
+# saving_dir = "/Users/helloabc/Desktop/person captures"
+saving_dir = "/home/logicfocus/ilens"
+
 os.makedirs(saving_dir, exist_ok=True)
 
 # Set the interval (in seconds) to capture frames
