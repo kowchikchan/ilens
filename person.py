@@ -11,7 +11,7 @@ net = cv2.dnn.readNet(
 # net = cv2.dnn.readNet("/Users/helloabc/ilensLatest1/src/main/resources/scripts/peopleCount/Testing/yolov3.weights", "/Users/helloabc/ilensLatest1/src/main/resources/scripts/peopleCount/Testing/yolov3.cfg")
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
-with open("/Users/helloabc/ilensLatest1/src/main/resources/scripts/peopleCount/Testing/coco.names", "r") as f:
+with open("/home/logicfocus/ilens/docs/coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
 # Load video or use webcam
